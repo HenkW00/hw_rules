@@ -1,0 +1,23 @@
+<div id="welcome" style="display: none;">
+    <h2>Welcome to the City!</h2>
+    <h3>Rules:</h3>
+    <ul id="rules-list"></ul>
+</div>
+
+<script>
+    window.addEventListener('message', function (event) {
+        var welcomeDiv = document.getElementById('welcome');
+        var rulesList = document.getElementById('rules-list');
+
+        if (event.data.display) {
+            rulesList.innerHTML = "";
+            event.data.rules.forEach(function (rule) {
+                var listItem = document.createElement('li');
+                listItem.textContent = rule;
+                rulesList.appendChild(listItem);
+            });
+
+            welcomeDiv.style.display = 'block';
+        }
+    });
+</script>
