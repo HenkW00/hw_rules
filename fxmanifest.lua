@@ -4,7 +4,7 @@ lua54 'yes'
 
 author 'HenkW'
 description 'ESX Welcome Script'
-version '1.2.2'
+version '1.2.3'
 
 dependencies {
     'es_extended',
